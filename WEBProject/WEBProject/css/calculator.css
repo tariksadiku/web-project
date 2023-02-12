@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fade-in { 
+    0% {  
+        opacity: 0; 
+        opacity: 0; 
+    }  
+    100% {  
+        opacity: 1; 
+        opacity: 1; 
+    }  
+  }
+
+  
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    letter-spacing: 0em;
+    line-height: 1.2
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3, h4, h5, h6, p, span {
+    font-weight: 400;
+}
+
+p, a {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+a:hover {
+    color: black;
+}
+
+.logInButton {
+    color: #333 !important;
+}
+
+.logInButton:hover {
+    color: black !important;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    position: sticky;
+    box-shadow: 1px 2px 4px -1px rgba(0,0,0,0.29);
+-webkit-box-shadow: 1px 2px 4px -1px rgba(0,0,0,0.29);
+-moz-box-shadow: 1px 2px 4px -1px rgba(0,0,0,0.29);
+}
+
+.header_logo {
+    width: 100%;
+    max-width: 100px;
+}
+
+.header_logo img {
+    width: 100%;
+}
+
+.header_links {
+    display: flex;
+    gap: 30px;
+}
+
+.header_links li a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.header_links li {
+    list-style: none;
+}
+
+.header_links li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 100%;
+    border-bottom: 2px solid #322c29;
+    transition: right .5s;
+}
+
+.header_links a:hover::after {
+    right: 0;
+}
+
+.header_links li a:hover {
+    color: black;
+}
+
+.logInButton {
+    margin-top: 2px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .header {
+        padding: 0px 20px;
+    }
+
+    .header_links {
+        gap: 10px;
+    }
+
+    .header_links li a, .logInButton {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    
+}
+
+footer {
+    background-color: #fe9002;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: 'Roboto';
+}
+
+.footer_links  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_links li a, .footer_links li a:hover {
+    color: white;
+    font-family: 'Roboto';
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subscribe p {
+    color: white;
+}
+
+.subscribe input {
+    border: none;
+    background-color: inherit;
+    border-bottom: 2px solid white;
+    height: 40px;
+    color: white;
+    padding: 0px 10px;
+}
+
+.subscribe input:focus-visible {
+    outline: none;
+    border: 2px solid white;
+}
+
+.subscribe input::placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+
+.callus {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+}
+
+@media only screen and (max-width: 430px) {
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer .subscribe {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}

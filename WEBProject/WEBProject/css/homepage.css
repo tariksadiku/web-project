@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+@keyframes shine {
+    100% {
+      left: -200%;
+    }
+}
+
+@keyframes fade-in { 
+    0% {  
+        opacity: 0; 
+        opacity: 0; 
+    }  
+    100% {  
+        opacity: 1; 
+        opacity: 1; 
+    }  
+  }
+
+  
+img {
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    letter-spacing: 0em;
+    line-height: 1.2
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+h3, h4, h5, h6, p, span {
+    font-weight: 400;
+}
+
+p, a, li {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+a:hover {
+    color: black;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 80px;
+    position: sticky;
+    box-shadow: 1px 2px 4px -1px rgba(0,0,0,0.29);
+-webkit-box-shadow: 1px 2px 4px -1px rgba(0,0,0,0.29);
+-moz-box-shadow: 1px 2px 4px -1px rgba(0,0,0,0.29);
+}
+
+.header_logo {
+    width: 100%;
+    max-width: 100px;
+}
+
+.header_logo img {
+    width: 100%;
+}
+
+.header_links {
+    display: flex;
+    gap: 30px;
+}
+
+@media (max-width: 450px) {
+    .header_links {
+        flex-wrap: wrap;
+    }
+}
+
+.header_links li a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.header_links li {
+    list-style: none;
+}
+
+.header_links li a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 100%;
+    border-bottom: 2px solid #322c29;
+    transition: right .5s;
+}
+
+.header_links a:hover::after {
+    right: 0;
+}
+
+.header_links li a:hover {
+    color: black;
+}
+
+.logInButton {
+    margin-top: 2px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header {
+        padding: 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .header {
+        padding: 0px 20px;
+    }
+
+    .header_links {
+        gap: 10px;
+    }
+
+    .header_links li a, .logInButton {
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+    
+}
+
+footer {
+    background-color: #fe9002;
+    padding: 40px 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: 'Roboto';
+}
+
+.footer_links  {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer_links li a, .footer_links li a:hover {
+    color: white;
+    font-family: 'Roboto';
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subscribe p {
+    color: white;
+}
+
+.subscribe input {
+    border: none;
+    background-color: inherit;
+    border-bottom: 2px solid white;
+    height: 40px;
+    color: white;
+    padding: 0px 10px;
+}
+
+.subscribe input:focus-visible {
+    outline: none;
+    border: 2px solid white;
+}
+
+.subscribe input::placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+
+.callus {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: white;
+}
+
+@media only screen and (max-width: 430px) {
+    footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    footer .subscribe {
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+}
+
+.main_slider {
+    position: relative;
+}
+
+
+.arrow-right {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 40px;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    right: 30px;
+}
+
+.arrow-left {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 40px;
+    transform: rotate(135deg);
+    position: absolute;
+    top: 50%;
+    left: 30px;
+}
+
+.arrow-right:hover, .arrow-left:hover {
+    cursor: pointer;
+}
+
+.main_image {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    position: relative;
+    opacity: 0;
+    transition: all 0.5s;
+    display: none;
+}
+
+.show_main_image {
+    opacity: 1;
+    display: flex;
+}
+
+.main_image img {
+    width: 100%;
+    height: 100%;
+}
+
+.main_image h1, .main_image p {
+    color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+    position: absolute;
+}
+
+.main_image h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.main_image h1  {
+    font-size: 70px;
+}
+
+.main_image h1 span {
+    font-size: 40px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .arrow-right, .arrow-left {
+        padding: 20px;
+    }
+
+    .main_image h1 {
+        font-size: 45px;
+    }
+
+    .main_image h1 span {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .main_image h1 {
+        font-size: 30px;
+    }
+
+    .main_image h1 span {
+        font-size: 18px;
+    }
+}
+
+.worlds_best_recipes {
+    display: flex;
+    padding: 0px 80px;
+    width: 100%;
+    margin-top: 20px;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    flex-direction: column;
+}
+
+.recipes_container {
+    display: flex;
+    gap: 20px;
+}
+
+.recipes_container .recipe {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+body .worlds_best_recipes .recipes_heading {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.recipe .image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+.worlds_best_recipes .recipe p {
+    text-align: center;
+}
+
+.recipe img {
+    clip-path: circle();
+}
+
+@media only screen and (max-width: 767px) {
+    .worlds_best_recipes {
+        padding: 0px 20px;
+        flex-direction: column;
+    }
+
+    .recipe h2 {
+        text-align: center;
+    }
+    
+    .worlds_best_recipes {
+        margin-bottom: 40px;
+    }
+
+    .recipes_container {
+        flex-wrap: wrap;
+    }
+
+    .recipes_container .recipe {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .recipe img {
+        width: 70%;
+    }
+
+    body .worlds_best_recipes .recipes_heading {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+}
+
+
+.product_cards {
+    display: flex;
+    padding: 40px 80px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product_cards .product_card {
+    display: flex;
+    width: 20%;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    padding-bottom: 15px;
+    transition: all 0.3s;
+    justify-content: space-between;
+    max-width: 400px;
+}
+
+.product_cards .product_card:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.product_card .product_card_image_container img {
+    width: 100%;
+    max-height: 200px;
+}
+
+.product_card .product_card_image_container {
+    margin-bottom: 10px;
+}
+
+.product_card h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.product_card ul {
+    padding: 10px;
+    font-weight: 500;
+}
+
+.product_card p {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.product_card ul li {
+    margin-bottom: 5px;
+}
+
+.product_card a {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    line-height: 1.42;
+    text-decoration: none;
+    text-align: center;
+    white-space: normal;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    display: inline-block;
+    padding: 11px 20px;
+    margin: 0;
+    width: auto;
+    min-width: 90px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 0;
+    color: #fff;
+    background: #293c70;
+    position: relative;
+    overflow: hidden;
+    transition: background .2s ease 0s;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    max-width: 200px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.product_card a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 150%;
+    width: 200%;
+    height: 100%;
+    transform: skew(-20deg);
+    background-image: linear-gradient(to right,transparent,rgba(255,255,255,.25),transparent);
+}
+
+.product_card a:hover::after {
+    animation: shine 1s cubic-bezier(.01,.56,1,1);
+}
+
+.product_cards_recipe_heading {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+    .product_cards {
+        flex-direction: column;
+        padding: 40px 20px;
+        align-items: center;
+    }
+
+    .product_cards_recipe_heading {
+        font-size: 24px;
+    }
+
+    .product_cards .product_card {
+        width: 100%;
+    }
+
+    .product_card h2 {
+        font-size: 22px;
+    }
+}
+
+.TDEECalculator {
+    width: 100%;
+    display: flex;
+    
+}
+
+.TDEECalculatorContainer {
+    width: 100%;
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 80px 20px;
+}
+
+.TDEECalculatorContainer h1 {
+    margin-bottom: 25px;
+}
+
+.TDEECalculatorContainer h3 {
+    margin-bottom: 50px;
+}
+
+.TDEE {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #f5f0f0;
+    background-color: #f9f6f6;
+    margin-bottom: 40px;
+}
+
+.TDEE label {
+    margin-bottom: 5px;
+}
+
+.TDEE input {
+    width: 100%;
+    padding: 10px 5px;
+    max-width: 250px;
+    border: 1px solid #e8e8e1;
+}
+
+
+
+.TDEE label {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 10px;
+}
+
+.TDEE select {
+    max-width: 250px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+button[type='submit'] {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    line-height: 1.42;
+    text-decoration: none;
+    text-align: center;
+    white-space: normal;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    display: inline-block;
+    padding: 11px 20px;
+    margin: 0;
+    width: auto;
+    min-width: 90px;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 0;
+    color: #fff;
+    background: #293c70;
+    position: relative;
+    overflow: hidden;
+    transition: background .2s ease 0s;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    max-width: 250px;
+    width: 100%;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 150%;
+    width: 200%;
+    height: 100%;
+    transform: skew(-20deg);
+    background-image: linear-gradient(to right,transparent,rgba(255,255,255,.25),transparent);
+}
+button:hover::after {
+    animation: shine 1s cubic-bezier(.01,.56,1,1);
+}
+
+.howTDEE {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+}
+
+.howTDEE .howTDEEtext {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.howTDEE .howTDEEImage {
+    display: flex;
+    width: 50%;
+    max-width: 390px;
+}
+
+img {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .howTDEE {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .howTDEE .howTDEEtext {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .howTDEE .howTDEEImage {
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+.select {
+    margin-bottom: 0px;
+}

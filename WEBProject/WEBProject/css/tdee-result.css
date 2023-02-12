@@ -1,0 +1,327 @@
+.TDEEResulsts {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    font-family: 'Roboto';
+}
+
+.tdeeEDIT {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 5px;
+}
+
+.tdeeEDIT p {
+    display: flex;
+    align-items: center;
+}
+
+.tdeeEDIT input {
+    width: 80px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.tdeeEDIT select {
+    margin-bottom: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.tdeeEDIT .recalculate-submit {
+    width: fit-content;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+@media (max-width: 768px) {
+    .tdeeEDIT {
+        flex-direction: column;
+    }
+
+    .tdeeEDIT p, .tdeeEDIT button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+.maintenance-calories-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.maintenance-calories {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.maintenance-calories h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.maintenance-calories .calories-per-something {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.maintenance-calories .calories-per-something .calories-per-day, .maintenance-calories .calories-per-something .calories-per-week {
+    border: 1px solid #fdf6e5;
+    background-color: #fdf6e5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.maintenance-calories .calories-per-something h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.maintenance-calories .calories-per-something span {
+    font-size: 24px;
+    text-align: center;
+}
+
+.maintenance-calories-text {
+    font-size: 26px;
+    width: 65%;
+}
+
+.bmi-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.bmi-container .ideal-weight {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+
+.bmi-container .your-bmi {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+}
+
+.bmi-container .ideal-weight h2 {
+    font-size: 28px;
+}
+
+.bmi-container .ideal-weight .ideal-weight-result {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.bmi-container .ideal-weight .ideal-weight-result span {
+    font-weight: bold;
+}
+
+.bmi-container .ideal-weight .ideal-weight-formula {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    font-size: 20px;
+}
+
+.your-bmi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.your-bmi p {
+    font-size: 28px;
+}
+
+.your-bmi .your-weight {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 20px;
+}
+
+.your-bmi .your-weight p {
+    font-size: 20px;
+}
+
+.macro-nutrients {
+    display: flex;
+    flex-direction: column;
+}
+
+.macro-nutrients h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.macro-nutrients .three-stages {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.macro-nutrients .three-stages p {
+    font-size: 24px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    width: 33%;
+    text-align: center;
+}
+
+.active-macronutrient {
+    border: 1px solid #ddd;
+    border-bottom: none !important;
+    border-radius: 5px;
+}
+
+.maintenance-nutrient {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maintenance-nutrient, .cutting-nutrient, .bulking-nutrient {
+    display: none;
+}
+
+.show-nutrient-tab {
+    display: flex;
+    justify-content: space-between;
+}
+
+.macronutrient-meaning {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.nutrient-box1, .nutrient-box2, .nutrient-box3 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.nutrient-box1 span , .nutrient-box2 span , .nutrient-box3 span {
+    color: white;
+    background-color: #337ab7;
+    width: fit-content;
+    width: 70%;
+    font-size: 14px;
+}
+
+.nutrient-box1 .macro-box, .nutrient-box2 .macro-box, .nutrient-box3 .macro-box {
+    border: 1px solid #fdf6e5;
+    background-color: #fdf6e5;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.macro-box span {
+    text-align: center;
+}
+
+.macro-box p {
+    color: #000;
+    background-color: initial;
+    font-size: 30px;
+}
+
+.macro-box span {
+    font-size: 24px;
+    color: #000;
+    background-color: initial;
+}
+
+@media (max-width: 768px) {
+    .maintenance-calories .calories-per-something h2 {
+        font-size: 24px;
+    }
+
+    .maintenance-calories .calories-per-something span {
+        font-size: 14px;
+    }
+
+    .maintenance-calories-container {
+        flex-direction: column;
+    }
+
+    .maintenance-calories .calories-per-day, .maintenance-calories .calories-per-week {
+        max-width: initial;
+    }
+
+    .maintenance-calories { 
+        width: initial;
+        width: 100%;
+    }
+
+    .maintenance-calories-text {
+        width: 100%;
+    }
+
+    .bmi-container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .bmi-container .ideal-weight {
+        width: 100%;
+    }
+
+    .bmi-container .your-bmi {
+        width: 100%;
+    }
+
+    .macronutrient-meaning {
+        flex-direction: column;
+    }
+
+    .show-nutrient-tab {
+        flex-direction: column;
+    }
+
+    .nutrient-box1, .nutrient-box2, .nutrient-box3 {
+        width: 100%;
+    }
+
+    .your-weight-container {
+        margin-top: 20px;
+    }
+
+    .three-stages p {
+        font-size: 14px !important;
+    }
+
+}
